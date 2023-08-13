@@ -1,7 +1,15 @@
 {
     "name": "zohaibtariq/count-gpt-token",
-    "description": "This is my package to count token of a gpt prompt",
+    "description": "A laravel project used to count token for chat gpt 2 & 3 prompt.",
     "keywords": [
+        "laravel",
+        "chatgpt",
+        "gpt2",
+        "gpt3",
+        "token",
+        "tiktoken",
+        "encoder",
+        "php",
         "zohaibtariq",
         "laravel",
         "count-gpt-token"
@@ -16,9 +24,7 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "spatie/laravel-package-tools": "^1.14.0",
-        "illuminate/contracts": "^10.0"
+        "php": "^8.1"
     },
     "require-dev": {
     },
@@ -33,13 +39,9 @@
         }
     },
     "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi"
     },
     "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": false
-        }
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
@@ -47,7 +49,7 @@
                 "ZohaibTariq\\CountGptToken\\CountGptTokenServiceProvider"
             ],
             "aliases": {
-                "CountGptToken": "ZohaibTariq\\CountGptToken\\Facades\\CountGptToken"
+                "CountGptToken": "ZohaibTariq\\CountGptToken\\Facades\\CountGptTokenFacade"
             }
         }
     },

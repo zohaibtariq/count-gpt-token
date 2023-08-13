@@ -2,23 +2,31 @@
 
 namespace ZohaibTariq\CountGptToken;
 
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Spatie\LaravelPackageTools\Package;
+use Illuminate\Support\ServiceProvider;
 
-class CountGptTokenServiceProvider extends PackageServiceProvider
+class CountGptTokenServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
+
+    /**
+     * Bootstrap the application services.
+     *
+     * @return void
+     */
+    public function boot()
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
-        $package
-            ->name('count-gpt-token');
-//            ->hasConfigFile()
-//            ->hasViews()
-//            ->hasMigration('create_count-gpt-token_table')
-//            ->hasCommand(CountGptTokenCommand::class);
+        //
     }
+
+    /**
+     * Register the application services.
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->bind('chat-gpt-token', function () {
+            return new ChatGptToken();
+        });
+//        $this->app->alias(ChatGptToken::class, 'ChatGptToken');
+    }
+
 }

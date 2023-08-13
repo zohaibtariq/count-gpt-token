@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @see \ZohaibTariq\CountGptToken\CountGptToken
  */
-class CountGptToken extends Facade
+class CountGptTokenFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \ZohaibTariq\CountGptToken\CountGptToken::class;
+        return 'chat-gpt-token';
     }
 }

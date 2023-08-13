@@ -10,7 +10,7 @@ It will count tokens for chatgpt (2, 3) prompt
 You can install the package via composer:
 
 ```bash
-composer require zohaibtariq/count-gpt-token
+composer require zohaibtariq/count-gpt-token:dev-main
 ```
 
 ## Usage
