@@ -11,6 +11,6 @@ class CountGptTokenFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'chat-gpt-token';
+        return 'count-gpt-token';
     }
 }

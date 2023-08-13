@@ -23,8 +23,8 @@ class CountGptTokenServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('chat-gpt-token', function () {
-            return new ChatGptToken();
+        $this->app->bind('count-gpt-token', function () {
+            return new CountGptToken();
         });
 //        $this->app->alias(ChatGptToken::class, 'ChatGptToken');
     }
